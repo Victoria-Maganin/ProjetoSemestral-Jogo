@@ -1,0 +1,21 @@
+@import url('../css/fontes.css');
+
+:root {
+    --cor-vermelha-principal: #fd0000;
+    --cor-vermelha-media: #a42f2f;
+    --cor-vermelha-fraca: #be4f4f;
+
+    --cor-marrom-fraco: #ebd5d2;
+
+    --cor-azul-principal: #0271F7;
+    --cor-azul-media: #d3ffff;
+    --cor-azul-fraca: #8fbff8;
+
+    --cor-roxa-fraca: #c2c2f1;
+
+    --cor-titulo-fraco: #000000;
+    --cor-titulo-forte: #ffffff;
+
+    --cor-padrao: #ffffff;
+    --cor-secundaria: #9b5050;
+}

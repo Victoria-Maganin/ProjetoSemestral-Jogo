@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um jogo de luta criado em HTML, CSS E JavaScript">
+    <link rel="shortcut icon" href="src/imagens/favicon/luta.ico" type="image/x-icon">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/animacoes.css">
+    <link rel="stylesheet" href="src/css/seletor-de-personagens/estilo.css">
+    <title>Storm Steal</title>
+</head>
+
+<body>
+    <main>
+        <header class="cabecalho">
+            <h1 class="title">Escolha seu Lutador</h1>
+        </header>
+
+        <section class="selection">
+
+            <!-- Player 1 -->
+            <div class="big__character player__number-1">
+                <img src="src/imagens/kazuki-big.png" alt="Imagem do personagem selecionado número um"
+                    id="selected__character">
+                <div class="name__character">
+                    <h2 id="nome-jogador-01">Kazuki</h2>
+                </div>
+            </div>
+
+            <!-- Characters -->
+            <ul class="characters__list">
+                <li class="character seleted" id="Kazuki" data-name="Kazuki" data-number="01">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/Kazuki.jpg" alt="Imagem miniatura do personagem ">
+                </li>
+
+                <li class="character" id="Mayo" data-name="Mayo" data-number="02">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/Mayo.jpg">
+
+                <li class="character second-player_seleted" id="El" data-name="El"
+                    data-number="03">
+                    <span class="tag">2P</span>
+                    <img src="src/imagens/EL.jpg"
+                        alt="Imagem miniatura do personagem El">
+                </li>
+                
+                <li class="character" id="luna" data-name="Luna" data-number="04">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/Luna.jpg"
+                        alt="Imagem miniatura do personagem Luna">
+                </li>
+
+                <li class="character" id="vladimir" data-name="Vladimir" data-number="05">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/Vladimir.jpg" alt="Imagem miniatura do personagem Vladimir">
+                </li>
+
+                <li class="character " id="chen" data-name="Chen" data-number="06">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/Chen.jpg"
+                        alt="Imagem miniatura do personagem Chen">
+                </li>
+            </ul>
+
+            <!-- Player 2 -->
+            <div class="big__character player__number-2">
+                <img src="src/imagens/chen-big.png" alt="Imagem do personagem selecionado número dois">
+                <div class="name__character">
+                    <h2 id="nome-jogador-02">Chen</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="card__description">
+            <div class="card">
+                <div class="content__title">
+                    <h2 id="title__name"></h2>
+                    <img src="src/imagens/preview-image.png" 
+                        id="title_thumbanail" class="card-img-y rounded color-change-2x">
+                </div>
+                <div class="content__text">
+
+                    <div class="text__box">
+                        <p id="box__descrition" class="text-center">
+                            <span class="placeholder col-6"></span>
+                            <span class="placeholder col-8"></span>
+                            <span class="placeholder w-75"></span>
+                            <span class="placeholder" style="width: 25%;"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="content__buttons">
+                    <input type="submit" value="Confirmar" class="button__style" id="conf">
+                    <input type="submit" value="Cancelar" class="button__style" id="canc">
+                </div>
+
+                <p id="card__link"><a href="http://StormSteal.com\" target="_blank"></a></p>
+            </div>
+        </section>
+
+        <div class="icons__about">
+            <div class="about__text">
+                </div>
+        </div>
+
+        <img src="src/svg/muted.svg" id="volume" alt="volume">
+    </main>
+
+    <audio src="src/audio/music.mp4" loop></audio>
+    <script src="src/js/main.js"></script>
+    <script>
+
+        let volume = document.querySelector('#volume');
+        let audio = document.querySelector('audio');
+        
+        volume.addEventListener('click', () =>{
+
+            if (volume.src.includes('muted.svg')) {
+                volume.src = 'src/svg/volume.svg';
+                audio.currentTime = 0;
+                audio.volume = 0.1;
+                audio.play();
+            }else{
+                volume.src = 'src/svg/muted.svg';
+                audio.pause();
+            }
+        })
+    </script>
+</body>
+
+</html>
